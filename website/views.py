@@ -15,13 +15,12 @@ def home(request):
             messages.success(request, "You have been logged in!!")
             return redirect('home')
         else:
-            messages.success(request, "There was an error logging in. Please try again...")
+            messages.success(request, "Entered credentials didn't match, Please try again...")
             return redirect('home')
     else:
         return render(request, 'home.html', {})
 
-def login_user(request):
-    pass
-
 def logout_user(request):
-    pass
+    logout(request)
+    messages.success(request, "You have been logged out...")
+    return redirect('home')
