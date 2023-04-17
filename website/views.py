@@ -46,3 +46,23 @@ def register_user(request):
         return render(request, 'register.html', {'form':form})
 
     return render(request, 'register.html', {'form':form})
+
+def customer_record(request, pk):
+    #check if user id logged in
+    if request.user.is_authenticated:
+        # look up records
+        customer_record = Records.objects.get(id=pk)
+        return render(request, 'record.html', {'customer_record': customer_record})
+    else:
+        messages.success(request, "You must be logged in to view that page...")
+        return redirect('home')
+
+def delete_record(request, pk):
+        if request.user.is_authenticated:
+            delete_it = Records.objects.get(id=pk)
+            delete_it.delete()
+            messages.success(request, "Record deleted successfully...")
+            return redirect('home')
+        else:
+            messages.success(request, "You must be logged in to delete a record!")
+            return redirect('home')
