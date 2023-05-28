@@ -9,6 +9,39 @@ This repository contains the code for the **Customer Relationship Management** a
 - **Customer Management:** Users can create, view, update, and delete customer records. The app provides an intuitive interface for managing customer details such as name, contact information, and additional notes.
 - **Integration Support:** The Django CRM App can be easily integrated with other systems or tools to leverage existing customer data or enhance CRM capabilities.
 
+## Run Locally
+- Open terminal on your device and run the following command to clone the repository:
+```
+https://github.com/sachin-404/Django-CRM.git
+```
+- Open the project in VS Code and set up virtual environment by running the following command
+```
+python3 -m venv venv
+```
+> NOTE: Use `python` instead of `python3` if you are using windows OS
+
+- Activate the virtual environment
+
+linux/mac: `source venv/bin/activate`
+
+windows: `venv/Scripts/activate`
+
+- Install dependencies by running the following command
+```
+pip3 install -r requirements.txt
+```
+
+- Perform migrations by running the following commands:
+```
+python manage.py makemigrations
+python manage.py migrate
+```
+- Finally run the following command to start the server:
+```
+python3 manage.py runserver
+```
+- Now enter `http://127.0.0.1:8000/` in browser and you will get to the homepage
+
 ## Screenshots
 
 ### Login
