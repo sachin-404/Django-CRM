@@ -9,6 +9,10 @@ This repository contains the code for the **Customer Relationship Management** a
 - **Customer Management:** Users can create, view, update, and delete customer records. The app provides an intuitive interface for managing customer details such as name, contact information, and additional notes.
 - **Integration Support:** The Django CRM App can be easily integrated with other systems or tools to leverage existing customer data or enhance CRM capabilities.
 
+## Deployment
+- Containerized it using **Docker** and deployed on **AWS** using **Jenkins**.  Jenkins is used to set up **CICD pipeline** with the help of GitHub web-hooks for the hassle free and continuous integration and deployment of the application.
+- I documented the whole deployment process in  a blogpost which can be accessed by clicking on [this link](https://sachinkant.hashnode.dev/deploy-django-app-on-aws-using-docker-and-jenkins).
+
 ## Run Locally
 - Open terminal on your device and run the following command to clone the repository:
 ```
